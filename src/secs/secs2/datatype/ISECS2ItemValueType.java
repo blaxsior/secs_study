@@ -3,10 +3,10 @@ package secs.secs2.datatype;
 /**
  * 값을 가지는 클래스를 표현
  */
-public abstract class IItemValueType<T> implements IItemType<T> {
+public abstract class ISECS2ItemValueType<T> implements ISECS2ItemType<T> {
     protected byte[] rawData;
 
-    public IItemValueType(byte[] rawData) {
+    public ISECS2ItemValueType(byte[] rawData) {
         this.rawData = rawData;
     }
 
@@ -16,5 +16,10 @@ public abstract class IItemValueType<T> implements IItemType<T> {
      */
     public byte[] getRawValue() {
         return rawData;
+    }
+
+    @Override
+    public int getLength() {
+        return rawData.length;
     }
 }

@@ -4,7 +4,7 @@ package secs.secs2.datatype;
  * DataType의 기본 구조를 제시하는 인터페이스
  * @param <T>
  */
-public interface IItemType<T> {
+public interface ISECS2ItemType<T> {
 
     /**
      * value를 데이터 타입에 맞게 받는다.

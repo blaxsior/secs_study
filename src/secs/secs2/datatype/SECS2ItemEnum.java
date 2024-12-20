@@ -1,12 +1,12 @@
 package secs.secs2.datatype;
 
+
 public enum SECS2ItemEnum {
     List(0b000000, "L"),
     Binary(0b001000, "B"),
     Boolean(0b001001, "BOOLEAN"),
     ASCII(0b010000, "A"),
-    JIS_8(0b010001, "J"),
-    Char(0b010010, "CHAR"),
+//    JIS_8(0b010001, "J"),
     Int8(0b011000, "I8"),
     Int1(0b011001, "I1"),
     Int2(0b011010, "I2"),

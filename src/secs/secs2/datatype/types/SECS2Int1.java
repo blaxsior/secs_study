@@ -3,8 +3,8 @@ package secs.secs2.datatype.types;
 import secs.secs2.datatype.ISECS2ItemValueType;
 import secs.secs2.datatype.SECS2ItemEnum;
 
-public class SECS2Binary extends ISECS2ItemValueType<byte[]> {
-    public SECS2Binary(byte[] rawData) {
+public class SECS2Int1 extends ISECS2ItemValueType<byte[]> {
+    public SECS2Int1(byte[] rawData) {
         super(rawData);
     }
 
@@ -15,11 +15,11 @@ public class SECS2Binary extends ISECS2ItemValueType<byte[]> {
 
     @Override
     public int getItemFormatCode() {
-        return SECS2ItemEnum.Binary.getItemFormatCode();
+        return SECS2ItemEnum.Int1.getItemFormatCode();
     }
 
     @Override
     public String getSML() {
-        return SECS2ItemEnum.Binary.getSML();
+        return SECS2ItemEnum.Int1.getSML();
     }
 }
