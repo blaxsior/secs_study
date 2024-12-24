@@ -40,6 +40,10 @@ public class ByteArrayUtil {
         return value;
     }
 
+    public static byte[] getByteArr(byte[] bytes) {
+        return bytes.clone();
+    }
+
     public static double[] getDoubleArr(byte[] bytes) {
         final int typeSize = 8;
 
@@ -59,6 +63,15 @@ public class ByteArrayUtil {
         float[] value = new float[bytes.length / typeSize];
         for(int i = 0; i < value.length; i++) {
             value[i] = buffer.getShort(i);
+        }
+
+        return value;
+    }
+
+    public static boolean[] getBooleanArr(byte[] bytes) {
+        boolean[] value = new boolean[bytes.length];
+        for(int i = 0; i < value.length; i++) {
+            value[i] = (bytes[i] == 0x01); // true인지 검사
         }
 
         return value;

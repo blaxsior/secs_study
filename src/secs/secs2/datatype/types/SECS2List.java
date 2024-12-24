@@ -1,19 +1,19 @@
 package secs.secs2.datatype.types;
 
-import secs.secs2.datatype.ISECS2ItemType;
-import secs.secs2.datatype.SECS2ItemEnum;
+import secs.secs2.datatype.types.core.ISECS2ItemType;
+import secs.secs2.datatype.enums.SECS2ItemEnum;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class SECS2List implements ISECS2ItemType<List<ISECS2ItemType<?>>> {
-    private final List<ISECS2ItemType<?>> items;
+public class SECS2List implements ISECS2ItemType {
+    private final List<ISECS2ItemType> items;
 
-    public void addItem(ISECS2ItemType<?> item) {
+    public void addItem(ISECS2ItemType item) {
         items.add(item);
     }
 
-    public void removeItem(ISECS2ItemType<?> item) {
+    public void removeItem(ISECS2ItemType item) {
         items.remove(item);
     }
 
@@ -22,7 +22,7 @@ public class SECS2List implements ISECS2ItemType<List<ISECS2ItemType<?>>> {
     }
 
     @Override
-    public List<ISECS2ItemType<?>> getValue() {
+    public List<ISECS2ItemType> getValue() {
         return items;
     }
 

@@ -1,16 +1,15 @@
-package secs.secs2.datatype;
+package secs.secs2.datatype.types.core;
 
 /**
  * DataType의 기본 구조를 제시하는 인터페이스
- * @param <T>
  */
-public interface ISECS2ItemType<T> {
+public interface ISECS2ItemType {
 
     /**
      * value를 데이터 타입에 맞게 받는다.
      * @return java 타입에 맞는 값. 표현 불가능한 경우 byte 반환
      */
-    T getValue();
+    <T> T getValue();
 
     /**
      * 이이템의 길이를 표한다.
